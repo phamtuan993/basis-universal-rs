@@ -17,11 +17,15 @@
 //! Please refer to https://github.com/BinomialLLC/basis_universal for more details.
 
 /// Support for transcoding basis-universal form to GPU-friendly formats.
+#[cfg(feature = "transcoding")]
 pub mod transcoding;
+#[cfg(feature = "transcoding")]
 pub use transcoding::*;
 
 /// Support for compressing raw image data to basis-universal form
+#[cfg(feature = "encoding")]
 pub mod encoding;
+#[cfg(feature = "encoding")]
 pub use encoding::*;
 
 pub use basis_universal_sys as sys;

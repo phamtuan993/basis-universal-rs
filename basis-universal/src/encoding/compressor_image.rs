@@ -1,4 +1,4 @@
-use basis_universal_sys as sys;
+use basis_universal_sys::encoding_bindings as sys;
 pub use basis_universal_sys::ColorU8;
 
 // foreign_types::foreign_type! {

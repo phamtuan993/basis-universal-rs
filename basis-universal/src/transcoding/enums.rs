@@ -304,6 +304,7 @@ impl TranscoderTextureFormat {
 }
 
 bitflags::bitflags! {
+    #[derive(Debug, Clone)]
     /// Flags that affect transcoding
     pub struct DecodeFlags: i32 {
         /// PVRTC1: decode non-pow2 ETC1S texture level to the next larger power of 2 (not implemented yet, but we're going to support it). Ignored if the slice's dimensions are already a power of 2.

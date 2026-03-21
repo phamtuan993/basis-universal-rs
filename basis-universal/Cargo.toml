@@ -12,10 +12,14 @@ keywords = ["game", "basis-universal", "texture", "compression", "gpu"]
 categories = ["game-development", "graphics", "api-bindings", "compression", "encoding"]
 
 [dependencies]
-basis-universal-sys = { version = "0.3.1", path = "../basis-universal-sys" }
-lazy_static = "1.4.0"
-bitflags = "1.2.1"
+basis-universal-sys = { version = "0.3.1", path = "../basis-universal-sys",default-features = false }
+bitflags = "2"
 
 [dev-dependencies]
 image = "0.23.13"
 lz4 = "1.23"
+[features]
+default = ["encoding", "transcoding"]
+encoding = ["basis-universal-sys/encoding"]
+transcoding = ["basis-universal-sys/transcoding"]
+
